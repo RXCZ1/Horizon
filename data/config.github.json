@@ -8,8 +8,7 @@
     "max_tokens": 8192,
     "throttle_sec": 4.5,
     "languages": [
-      "zh",
-      "en"
+      "ar"
     ],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5
@@ -120,6 +119,46 @@
         "enabled": true,
         "category": "linux-kernel",
         "profile": "tech-news"
+      },
+      {
+        "name": "OpenAI News",
+        "url": "https://openai.com/news/rss.xml",
+        "enabled": true,
+        "category": "ai-news",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "Google AI Blog",
+        "url": "https://blog.google/technology/ai/rss/",
+        "enabled": true,
+        "category": "ai-news",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "MIT Technology Review - AI",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+        "enabled": true,
+        "category": "ai-news",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "TechCrunch - AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "enabled": true,
+        "category": "ai-news",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
+      },
+      {
+        "name": "arXiv cs.AI",
+        "url": "https://export.arxiv.org/rss/cs.AI",
+        "enabled": true,
+        "category": "research",
+        "profile": "tech-news",
+        "content_extractor": "trafilatura"
       }
     ],
     "reddit": {
@@ -136,6 +175,15 @@
         },
         {
           "subreddit": "LocalLLaMA",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 60,
+          "profile": "tech-news"
+        },
+        {
+          "subreddit": "artificial",
           "enabled": true,
           "sort": "hot",
           "time_filter": "day",
